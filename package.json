@@ -1,5 +1,5 @@
 {
-  "name": "@ionic/app-scripts",
+  "name": "@chezrd/ionic-app-scripts",
   "version": "3.2.4",
   "description": "Scripts for Ionic Projects",
   "homepage": "https://ionicframework.com/",
@@ -92,7 +92,7 @@
     "rxjs": "^5.5.10",
     "sw-toolbox": "^3.6.0",
     "tslint-ionic-rules": "0.0.8",
-    "typescript": "~2.4.2",
+    "typescript": "^3.7.7",
     "zone.js": "^0.8.26"
   },
   "repository": {

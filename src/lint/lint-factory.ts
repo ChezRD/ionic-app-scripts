@@ -43,7 +43,7 @@ export function getLintResult(linter: Linter): LintResult {
  */
 export function typeCheck(context: BuildContext, program: Program, linterOptions?: LinterOptions): Promise<Diagnostic[]> {
   if (isObject(linterOptions) && linterOptions.typeCheck) {
-    return Promise.resolve(getPreEmitDiagnostics(program));
+    return Promise.resolve(getPreEmitDiagnostics(program).slice());
   }
   return Promise.resolve([]);
 }

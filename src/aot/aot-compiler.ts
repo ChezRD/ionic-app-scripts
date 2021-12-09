@@ -87,7 +87,7 @@ function errorCheckProgram(context: BuildContext, tsConfig: TsConfig, compilerHo
                     .concat(program.getOptionsDiagnostics());
 
   if (globalDiagnostics.length) {
-    const diagnostics = runTypeScriptDiagnostics(context, globalDiagnostics);
+    const diagnostics = runTypeScriptDiagnostics(context, globalDiagnostics.slice());
     printDiagnostics(context, DiagnosticsType.TypeScript, diagnostics, true, false);
     throw new BuildError(new Error('Failed to transpile TypeScript'));
   }

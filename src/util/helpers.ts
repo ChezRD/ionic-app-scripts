@@ -118,7 +118,7 @@ export function writeFileAsync(filePath: string, content: string) {
       if (err) {
         return reject(err);
       }
-      return resolve();
+      return resolve(true);
     });
   });
 }
@@ -211,11 +211,11 @@ export function copyFileAsync(srcPath: string, destPath: string) {
 
 export function mkDirpAsync(directoryPath: string) {
   return new Promise((resolve, reject) => {
-    ensureDir(directoryPath, (err: Error) => {
+    ensureDir(directoryPath, {}, (err: Error) => {
       if (err) {
         return reject(err);
       }
-      return resolve();
+      return resolve(true);
     });
   });
 }
